@@ -2,3 +2,4 @@
 
 #### 1.0.0-b1
 * Initial Git Release.
+* Erste Beta

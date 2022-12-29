@@ -1,0 +1,62 @@
+{#
+* 
+* Stats Permissions. An extension for the phpBB Forum Software package.
+*
+* @copyright (c) 2019, LukeWCS, https://www.wcsaga.org/
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+#}
+
+{% INCLUDE 'overall_header.html' %}
+<a id="maincontent"></a>
+
+<h1>{{ lang('DISABLEEMOJIS_CONFIG_TITLE') }}</h1>
+<p>{{ lang('DISABLEEMOJIS_CONFIG_DESC', DISABLEEMOJIS_EXT_NAME) }}</p>
+
+<form id="disableemojis_form" method="post" action="{{ U_ACTION }}">
+	<fieldset>
+		<legend>{{ lang('DISABLEEMOJIS_SETTINGS_TITLE') }}</legend>
+		<dl>
+			<dt><label>{{ lang('DISABLEEMOJIS_SAVE_EMOJI_TOKEN') ~ lang('COLON') }}</label><br><span>{{ lang('DISABLEEMOJIS_SAVE_EMOJI_TOKEN_EXP') }}</span></dt>
+			<dd>
+				{{ _self.switch('disableemojis_save_emoji_token', DISABLEEMOJIS_SAVE_EMOJI_TOKEN) }}
+			</dd>
+		</dl>
+		<dl>
+			<dt><label>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_TYPE') ~ lang('COLON') }}</label><br><span>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_TYPE_EXP') }}</span></dt>
+			<dd>
+				<select name="disableemojis_replace_token_mode">
+					<option value="0"{{ DISABLEEMOJIS_REPLACE_TOKEN_MODE == 0 ? ' selected' }}>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_DO_NOTHING') }}</option>
+					<option value="1"{{ DISABLEEMOJIS_REPLACE_TOKEN_MODE == 1 ? ' selected' }}>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE') }}</option>
+					<option value="2"{{ DISABLEEMOJIS_REPLACE_TOKEN_MODE == 2 ? ' selected' }}>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_SHOW_HINT') }}</option>
+					<option value="3"{{ DISABLEEMOJIS_REPLACE_TOKEN_MODE == 3 ? ' selected' }}>{{ lang('DISABLEEMOJIS_REPLACE_TOKEN_REMOVE_ALL') }}</option>
+				</select>
+			</dd>
+		</dl>
+
+	<fieldset>
+		<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+
+		<p class="submit-buttons">
+			<input class="button1" type="submit" name="submit" value="{{ lang('SUBMIT') }}">&nbsp;
+			<input class="button2" type="button" name="form_reset" value="{{ lang('RESET') }}">
+		</p>
+	</fieldset>
+
+	{{ S_FORM_TOKEN }}
+</form>
+
+<p class="disableemojis_copyright">
+	{{ DISABLEEMOJIS_EXT_NAME }} v{{ DISABLEEMOJIS_EXT_VER }} &copy; LukeWCS<br>
+</p>
+
+{% INCLUDE 'overall_footer.html' %}
+
+{% INCLUDECSS '@lukewcs_disableemojis/acp_disableemojis.css' %}
+{% INCLUDECSS '@lukewcs_disableemojis/acp_toggle.css' %}
+
+{% macro switch(name, checked = false) %}
+{% spaceless %}
+	<input type="checkbox" class="toggle" name="{{ name }}" value="1"{{ checked ? ' checked' }}>
+{% endspaceless %}
+{% endmacro %}

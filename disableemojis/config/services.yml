@@ -1,0 +1,8 @@
+services:
+    lukewcs.disableemojis.listener:
+        class: lukewcs\disableemojis\event\listener
+        arguments:
+            - '@config'
+            - '@language'
+        tags:
+            - { name: event.listener }

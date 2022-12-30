@@ -22,10 +22,10 @@ class listener implements EventSubscriberInterface
 		\phpbb\language\language $language
 	)
 	{
-		$this->config		= $config;
-		$this->language		= $language;
+		$this->config	= $config;
+		$this->language	= $language;
 
-		$language->add_lang('info_acp_disableemojis', 'lukewcs\disableemojis');
+		$language->add_lang('info_acp_disableemojis', 'lukewcs/disableemojis');
 		$this->replace_token = [
 			'',
 			'$1',

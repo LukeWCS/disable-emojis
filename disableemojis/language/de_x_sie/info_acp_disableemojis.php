@@ -1,9 +1,9 @@
 <?php
 /**
 *
-* Stats Permissions. An extension for the phpBB Forum Software package.
+* Disable Emojis. An extension for the phpBB Forum Software package.
 *
-* @copyright (c) 2019, LukeWCS, https://www.wcsaga.org/
+* @copyright (c) 2022, LukeWCS, https://www.wcsaga.org/
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ « » “ ” … „ “
 //
 $lang = array_merge($lang, [
-	'DISABLEEMOJIS_NAV_TITLE'				=> 'Disable Emojis',
+	'DISABLEEMOJIS_NAV_TITLE'				=> 'Emojis deaktivieren',
 	'DISABLEEMOJIS_NAV_CONFIG'				=> 'Einstellungen',
 
 	'DISABLEEMOJIS_MSG_REPLACE_TOKEN_HINT'	=> '[Emojis sind deaktiviert]',

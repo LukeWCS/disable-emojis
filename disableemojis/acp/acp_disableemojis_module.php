@@ -1,9 +1,9 @@
 <?php
 /**
 *
-* Stats Permissions. An extension for the phpBB Forum Software package.
+* Disable Emojis. An extension for the phpBB Forum Software package.
 *
-* @copyright (c) 2019, LukeWCS, https://www.wcsaga.org/
+* @copyright (c) 2022, LukeWCS, https://www.wcsaga.org/
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
@@ -12,21 +12,22 @@ namespace lukewcs\disableemojis\acp;
 
 class acp_disableemojis_module
 {
-	protected $config;
-	protected $request;
-	protected $template;
 	protected $language;
+	protected $template;
+	protected $request;
+	protected $config;
 	protected $cache;
 	protected $md_manager;
+    public $u_action;
 
 	public function main()
 	{
-		global $config, $request, $template, $language, $cache, $phpbb_container;
+		global $language, $template, $request, $config, $cache, $phpbb_container;
 
-		$this->config = $config;
-		$this->request = $request;
-		$this->template = $template;
 		$this->language = $language;
+		$this->template = $template;
+		$this->request = $request;
+		$this->config = $config;
 		$this->cache = $cache;
 		$this->md_manager = $phpbb_container->get('ext.manager')->create_extension_metadata_manager('lukewcs/disableemojis');
 		$this_meta = $this->md_manager->get_metadata('all');

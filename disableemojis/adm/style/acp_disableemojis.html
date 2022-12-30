@@ -1,8 +1,8 @@
 {#
-* 
-* Stats Permissions. An extension for the phpBB Forum Software package.
 *
-* @copyright (c) 2019, LukeWCS, https://www.wcsaga.org/
+* Disable Emojis. An extension for the phpBB Forum Software package.
+*
+* @copyright (c) 2022, LukeWCS, https://www.wcsaga.org/
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 #}
@@ -33,13 +33,14 @@
 				</select>
 			</dd>
 		</dl>
+	</fieldset>
 
 	<fieldset>
 		<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
 
 		<p class="submit-buttons">
 			<input class="button1" type="submit" name="submit" value="{{ lang('SUBMIT') }}">&nbsp;
-			<input class="button2" type="button" name="form_reset" value="{{ lang('RESET') }}">
+			<input class="button2" type="reset" name="reset" value="{{ lang('RESET') }}">
 		</p>
 	</fieldset>
 

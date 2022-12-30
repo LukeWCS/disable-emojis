@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ « » “ ” … „ “
 //
 $lang = array_merge($lang, [
-	'DISABLEEMOJIS_CONFIG_TITLE'				=> 'Emojies deaktivieren',
+	'DISABLEEMOJIS_CONFIG_TITLE'				=> 'Emojis deaktivieren',
 	'DISABLEEMOJIS_CONFIG_DESC'					=> 'Hier können Sie die Einstellungen für die Erweiterung <strong>%s</strong> ändern.',
 
 	'DISABLEEMOJIS_SETTINGS_TITLE'				=> 'Einstellungen',
@@ -51,7 +51,6 @@ $lang = array_merge($lang, [
 	'DISABLEEMOJIS_REPLACE_TOKEN_DO_NOTHING'	=> 'Nichts ändern',
 	'DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE'		=> 'Emoji Code belassen, aber Token entfernen.',
 	'DISABLEEMOJIS_REPLACE_TOKEN_SHOW_HINT'		=> 'Alles entfernen und Hinweis anzeigen',
-	'DISABLEEMOJIS_REPLACE_TOKEN_REMOVE_ALL'	=> 'Alles entfernen ohne Hinweis',
 
-	'DISABLEEMOJIS_MSG_SAVED_SETTINGS'			=> 'Emojies deaktivieren: Einstellungen erfolgreich gespeichert.',
+	'DISABLEEMOJIS_MSG_SAVED_SETTINGS'			=> 'Emojis deaktivieren: Einstellungen erfolgreich gespeichert.',
 ]);

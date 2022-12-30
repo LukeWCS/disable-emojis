@@ -49,9 +49,8 @@ $lang = array_merge($lang, [
 	'DISABLEEMOJIS_REPLACE_TOKEN_TYPE_EXP'		=> 'Here you can choose what to do with emojis in existing posts. The emoji code is a sequence of one or more characters used to insert an emoji into a post. The emoji token, on the other hand, is only visible in the database and serves as an identifier for phpBB.<br><strong>Note: The switch has no effect on the database, only on the display.</strong>',
 
 	'DISABLEEMOJIS_REPLACE_TOKEN_DO_NOTHING'	=> 'Change nothing',
-	'DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE'		=> 'Leave the emoji code but remove the token.',
+	'DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE'		=> 'Leave the emoji code but remove the token',
 	'DISABLEEMOJIS_REPLACE_TOKEN_SHOW_HINT'		=> 'Remove everything and show hint',
-	'DISABLEEMOJIS_REPLACE_TOKEN_REMOVE_ALL'	=> 'Remove everything without notice',
 
 	'DISABLEEMOJIS_MSG_SAVED_SETTINGS'			=> 'Disable emojis: Settings saved successfully.',
 ]);

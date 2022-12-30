@@ -1,9 +1,9 @@
 {
 	"name": "lukewcs/disableemojis",
 	"type": "phpbb-extension",
-	"description": "Only serves as a temporary solution until phpBB itself offers the appropriate settings: This will disable the “S9E TextFormatter” Emoji plugin for new or modified posts. In addition, the display of Emojis in existing posts is suppressed. This also applies to PMs.",
+	"description": "Only serves as a temporary solution until phpBB itself offers the appropriate settings: This will disable the S9E TextFormatter Emoji plugin for new or modified posts. In addition, the display of Emojis in existing posts is suppressed. This also applies to PMs.",
 	"homepage": "",
-	"version": "1.0.0-b2",
+	"version": "1.0.0-b3",
 	"time": "2022-12-27",
 	"license": "GPL-2.0-only",
 	"authors": [

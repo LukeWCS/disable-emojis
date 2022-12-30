@@ -30,7 +30,6 @@ class listener implements EventSubscriberInterface
 			'',
 			'$1',
 			'<I><s>[i]</s><B><s>[b]</s>' . $this->language->lang('DISABLEEMOJIS_MSG_REPLACE_TOKEN_HINT') . '<e>[/b]</e></B><e>[/i]</e></I>',
-			'',
 		];
 	}
 

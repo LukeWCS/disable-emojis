@@ -37,6 +37,5 @@ if (empty($lang) || !is_array($lang))
 // ’ « » “ ” … „ “
 //
 $lang = array_merge($lang, [
-	'DISABLEEMOJIS_NAV_TITLE'	=> 'Disable Emojis',
-	'DISABLEEMOJIS_NAV_CONFIG'	=> 'Settings',
+	'DISABLEEMOJIS_MSG_REPLACE_TOKEN_HINT'	=> '[Emojis sind deaktiviert]',
 ]);

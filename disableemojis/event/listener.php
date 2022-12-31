@@ -25,7 +25,7 @@ class listener implements EventSubscriberInterface
 		$this->config	= $config;
 		$this->language	= $language;
 
-		$language->add_lang('info_acp_disableemojis', 'lukewcs/disableemojis');
+		$language->add_lang('s9e_disableemojis', 'lukewcs/disableemojis');
 		$this->replace_token = [
 			'',
 			'$1',

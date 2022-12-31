@@ -19,4 +19,8 @@ legend {
 		margin-left: -6px;
 		padding: 2px 5px;
 	}
+
+	#disableemojis_form dd {
+		margin-top: .5em;
+	}
 }

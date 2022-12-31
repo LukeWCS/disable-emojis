@@ -43,11 +43,10 @@ $lang = array_merge($lang, [
 	'DISABLEEMOJIS_SETTINGS_TITLE'				=> 'Settings',
 
 	'DISABLEEMOJIS_SAVE_EMOJI_TOKEN'			=> 'Write emoji tokens to database',
-	'DISABLEEMOJIS_SAVE_EMOJI_TOKEN_EXP'		=> 'Determines whether the emoji token should be written to the database when creating a new post or changing an existing post. The token is responsible for recognizing an emoji when loading a contribution from the database and then integrating it from an external source when it is displayed. Changing this switch requires clearing the cache, which happens automatically.<br><strong>Note: If you want to allow emojis again at a later date, you should leave this switch activated.</strong>',
+	'DISABLEEMOJIS_SAVE_EMOJI_TOKEN_EXP'		=> 'Determines whether the emoji token should be written to the database when creating a new post or changing an existing post. The token is responsible for recognizing an emoji when loading a contribution from the database and then integrating it from an external source when it is displayed. Changing this switch requires clearing the cache, which happens automatically.<br><strong>Note: If you only want to deactivate emojis temporarily, you should leave this switch activated.</strong>',
 
-	'DISABLEEMOJIS_REPLACE_TOKEN_TYPE'			=> 'Handling an emoji in existing posts',
-	'DISABLEEMOJIS_REPLACE_TOKEN_TYPE_EXP'		=> 'Here you can choose what to do with emojis in existing posts. The emoji code is a sequence of one or more characters used to insert an emoji into a post. The emoji token, on the other hand, is only visible in the database and serves as an identifier for phpBB.<br><strong>Note: The switch has no effect on the database, only on the display.</strong>',
-
+	'DISABLEEMOJIS_REPLACE_TOKEN_MODE'			=> 'Handling emojis in existing posts',
+	'DISABLEEMOJIS_REPLACE_TOKEN_MODE_EXP'		=> 'Here you can choose what to do with emojis in existing posts. The emoji code is a sequence of one or more characters used to insert an emoji into a post. The emoji token, on the other hand, is only visible in the database and serves as an identifier for phpBB.<br><strong>Note: The switch has no effect on the database, only on the display.</strong>',
 	'DISABLEEMOJIS_REPLACE_TOKEN_DO_NOTHING'	=> 'Change nothing',
 	'DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE'		=> 'Leave the emoji code but remove the token',
 	'DISABLEEMOJIS_REPLACE_TOKEN_SHOW_HINT'		=> 'Remove everything and show hint',

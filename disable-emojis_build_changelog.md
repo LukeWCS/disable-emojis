@@ -1,4 +1,8 @@
-### 1.0.0
+#### 1.0.0
+* GH Release.
+* Updateprüfung eingefügt.
+* EC Fehler behoben.
+* Kommentarblock in allen Dateien aktualisiert.
 
 #### 1.0.0-b4
 * Im CSS fehlte für Responsive ein Abstand für `dd` nach oben, wie es bei LFWWH und EMP gemacht wurde. (Meldung Kirk)

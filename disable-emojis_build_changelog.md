@@ -1,3 +1,18 @@
+### 1.0.1
+
+#### 1.0.1-b1
+* ACP-Modul:
+  * Umgestellt auf Controller.
+* ACP-Template:
+  * Umbenannt.
+  * Twig: `spaceless` Tag entfernt und durch `spaceless` Filter und Whitespace Modifier ersetzt.
+  * Toggle Farben von EMP übernommen.
+* PHP Mindestversion auf 7.1 erhöht und Maximalversion auf 8.2 erhöht:
+  * `composer.json` angepasst.
+  * `ext.php` angepasst.
+
+### 1.0.0
+
 #### 1.0.0
 * GH Release.
 * Updateprüfung eingefügt.

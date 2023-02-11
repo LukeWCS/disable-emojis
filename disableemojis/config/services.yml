@@ -6,3 +6,12 @@ services:
             - '@language'
         tags:
             - { name: event.listener }
+    lukewcs.disableemojis.controller.acp:
+        class: lukewcs\disableemojis\controller\acp_disableemojis_controller
+        arguments:
+            - '@language'
+            - '@template'
+            - '@request'
+            - '@config'
+            - '@cache.driver'
+            - '@ext.manager' 

@@ -1,5 +1,5 @@
 ### 1.0.1
-GH (2023-02-)
+GH (2023-02-12)
 
 * ACP-Template:
   * Toggle Farben von Extension Manager Plus übernommen.

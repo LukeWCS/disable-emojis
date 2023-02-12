@@ -1,5 +1,10 @@
 ### 1.0.1
 
+#### 1.0.1-b2
+* ACP-Modul:
+  * Altes Modul mit manuellem Modus entfernt und neu im automatischen Modus hinzugefügt.
+* Neue Migration.
+
 #### 1.0.1-b1
 * ACP-Modul:
   * Umgestellt auf Controller.

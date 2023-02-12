@@ -21,10 +21,11 @@ class acp_disableemojis_module
 		global $phpbb_container;
 
 		$language = $phpbb_container->get('language');
-		$this->tpl_name = 'acp_disableemojis_settings';
-		$this->page_title = $language->lang('DISABLEEMOJIS_NAV_TITLE') . ' - ' . $language->lang('DISABLEEMOJIS_NAV_CONFIG');
 
+		$this->page_title = $language->lang('DISABLEEMOJIS_NAV_TITLE') . ' - ' . $language->lang('DISABLEEMOJIS_NAV_CONFIG');
 		$acp_controller = $phpbb_container->get('lukewcs.disableemojis.controller.acp');
+
+		$this->tpl_name = 'acp_disableemojis_settings';
 		$acp_controller->set_page_url($this->u_action);
 		$acp_controller->module_settings();
 	}

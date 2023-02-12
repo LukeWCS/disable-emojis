@@ -10,24 +10,17 @@
 
 namespace lukewcs\disableemojis\migrations;
 
-class v_1_0_0 extends \phpbb\db\migration\migration
+class v_1_0_1 extends \phpbb\db\migration\migration
 {
 	public static function depends_on()
 	{
-		return ['\phpbb\db\migration\data\v32x\v3210'];
+		return ['\lukewcs\disableemojis\migrations\v_1_0_0'];
 	}
 
 	public function update_data()
 	{
 		return [
-			['config.add', ['disableemojis_save_emoji_token', 1]],
-			['config.add', ['disableemojis_replace_token_mode', 0]],
-			['module.add', [
-				'acp',
-				'ACP_CAT_DOT_MODS',
-				'DISABLEEMOJIS_NAV_TITLE'
-			]],
-			['module.add', [
+			['module.remove', [
 				'acp',
 				'DISABLEEMOJIS_NAV_TITLE', [
 					'module_basename'	=> '\lukewcs\disableemojis\acp\acp_disableemojis_module',
@@ -35,6 +28,13 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 					'module_mode'		=> 'overview',
 					'module_auth'		=> 'ext_lukewcs/disableemojis && acl_a_board',
 				],
+			]],
+			['module.add', [
+				'acp',
+				'DISABLEEMOJIS_NAV_TITLE', [
+					'module_basename'	=> '\lukewcs\disableemojis\acp\acp_disableemojis_module',
+					'modes'				=> ['settings'],
+				]
 			]],
 		];
 	}

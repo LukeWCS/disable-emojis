@@ -1,7 +1,22 @@
-### 1.0.1
+### 1.1.0
+* Release (2023-12-09)
+* Freigegeben für PHP 8.3.
+* Erweiterung ist jetzt kompatibel mit Toggle Control. Somit können Administratoren zentral an einer Stelle entscheiden, ob für Ja/Nein Schalter Radio Buttons, Checkboxen oder Toggles verwendet werden sollen.
+* ACP-Template:
+  * Das `switch()` Makro wurde erweitert, um auch Checkboxen und Radio Buttons generieren zu können. Notwendig für die TC Kompatibilität.
+  * Footer durch `footer()` Makro ersetzt.
+  * PullDown Menüs durch `select()` Makro ersetzt.
+* ACP-Controller:
+  * Meine Metadata Funktion eingebaut für das Footer Makro.
+* CSS:
+  * Das Toggle-CSS in das ACP-CSS integriert und die separate Datei entfernt.
+  * Bei Toggles wird jetzt eine Bewegungs-Animation beim Slider verwendet, sowie eine Farb-Animation (Übergang) bei der Hintergrundfarbe. [Vorschlag von Kirk (phpBB.de)]
+  * Pointer Cursor bei `dt label` deaktiviert.
+* Sprachdateien:
+  * An das Footer Makro angepasst.
 
-#### 1.0.1
-* Release.
+### 1.0.1
+* Release (2023-02-12)
 
 #### 1.0.1-b2
 * ACP-Modul:
@@ -19,10 +34,8 @@
   * `composer.json` angepasst.
   * `ext.php` angepasst.
 
-### 1.0.0
-
 #### 1.0.0
-* GH Release.
+* Release (2023-01-01)
 * Updateprüfung eingefügt.
 * EC Fehler behoben.
 * Kommentarblock in allen Dateien aktualisiert.

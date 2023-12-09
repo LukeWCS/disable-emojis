@@ -56,6 +56,7 @@ class listener implements EventSubscriberInterface
 		{
 			return;
 		}
+
 		$data = $event['xml'];
 		$data = preg_replace('/<EMOJI.*?>(.*?)<\/EMOJI>/', $this->replace_token[$this->config['disableemojis_replace_token_mode']], $data);
 		$event['xml'] = $data;

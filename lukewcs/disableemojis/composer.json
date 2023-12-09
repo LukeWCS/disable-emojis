@@ -1,32 +1,32 @@
 {
-	"name": "lukewcs/disableemojis",
-	"type": "phpbb-extension",
-	"description": "Only serves as a temporary solution until phpBB itself offers the appropriate settings: This will disable the S9E TextFormatter Emoji plugin for new or modified posts. In addition, the display of Emojis in existing posts is suppressed. This also applies to PMs.",
-	"homepage": "https://github.com/LukeWCS/disable-emojis",
-	"version": "1.0.1",
-	"time": "2023-02-12",
-	"license": "GPL-2.0-only",
-	"authors": [
-		{
-			"name": "LukeWCS",
-			"homepage": "https://github.com/LukeWCS",
-			"role": "Developer"
-		}
-	],
-	"require": {
-		"php": ">=7.1.0,<8.3.0@dev",
-		"composer/installers": "~1.0.0"
-	},
-	"extra": {
-		"display-name": "Disable Emojis",
-		"soft-require": {
-			"phpbb/phpbb": ">=3.2.11,<3.4.0@dev"
-		},
-		"version-check": {
-			"host": "lukewcs.github.io",
-			"directory": "/disable-emojis",
-			"filename": "version_check.json",
-			"ssl": true
-		}
-	}
+    "name": "lukewcs/disableemojis",
+    "type": "phpbb-extension",
+    "description": "Only serves as a temporary solution until phpBB itself offers the appropriate settings: This will disable the S9E TextFormatter Emoji plugin for new or modified posts. In addition, the display of Emojis in existing posts is suppressed. This also applies to PMs.",
+    "homepage": "https://github.com/LukeWCS/disable-emojis",
+    "version": "1.1.0",
+    "time": "2023-12-09",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "LukeWCS",
+            "homepage": "https://github.com/LukeWCS",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0,<8.4.0@dev",
+        "composer/installers": "~1.0.0"
+    },
+    "extra": {
+        "display-name": "Disable Emojis",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.11,<3.4.0@dev"
+        },
+        "version-check": {
+            "host": "lukewcs.github.io",
+            "directory": "/disable-emojis",
+            "filename": "version_check.json",
+            "ssl": true
+        }
+    }
 }

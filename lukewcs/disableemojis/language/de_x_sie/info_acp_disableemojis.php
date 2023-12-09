@@ -37,6 +37,7 @@ if (empty($lang) || !is_array($lang))
 // ’ « » “ ” … „ “
 //
 $lang = array_merge($lang, [
-	'DISABLEEMOJIS_NAV_TITLE'	=> 'Emojis deaktivieren',
-	'DISABLEEMOJIS_NAV_CONFIG'	=> 'Einstellungen',
+	'DISABLEEMOJIS_NAV_TITLE'		=> 'Emojis deaktivieren',
+	'DISABLEEMOJIS_NAV_CONFIG'		=> 'Einstellungen',
+	'DISABLEEMOJIS_VERSION_STRING'	=> 'v%s',
 ]);

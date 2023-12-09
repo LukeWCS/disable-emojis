@@ -18,6 +18,8 @@ class acp_disableemojis_controller
 	protected $config;
 	protected $cache;
 	protected $ext_manager;
+
+	protected $metadata;
 	public $u_action;
 
 	public function __construct(
@@ -35,11 +37,14 @@ class acp_disableemojis_controller
 		$this->config		= $config;
 		$this->cache		= $cache;
 		$this->ext_manager	= $ext_manager;
+
+		$this->metadata		= $this->ext_manager->create_extension_metadata_manager('lukewcs/disableemojis')->get_metadata('all');
 	}
 
 	public function module_settings()
 	{
 		$this->language->add_lang(['acp_disableemojis'], 'lukewcs/disableemojis');
+		$this->set_meta_template_vars('DISABLEEMOJIS');
 
 		if ($this->request->is_set_post('submit'))
 		{
@@ -57,25 +62,38 @@ class acp_disableemojis_controller
 			trigger_error($this->language->lang('DISABLEEMOJIS_MSG_SAVED_SETTINGS') . adm_back_link($this->u_action));
 		}
 
-		add_form_key('disableemojis');
-
-		$md_manager = $this->ext_manager->create_extension_metadata_manager('lukewcs/disableemojis');
-		$this_meta = $md_manager->get_metadata('all');
-
-		$ext_display_name	= $this_meta['extra']['display-name'];
-		$ext_ver			= $this_meta['version'];
-
 		$this->template->assign_vars([
-			'DISABLEEMOJIS_EXT_NAME'			=> $ext_display_name,
-			'DISABLEEMOJIS_EXT_VER'				=> $ext_ver,
-			'DISABLEEMOJIS_SAVE_EMOJI_TOKEN'	=> $this->config['disableemojis_save_emoji_token'],
-			'DISABLEEMOJIS_REPLACE_TOKEN_MODE'	=> $this->config['disableemojis_replace_token_mode'],
-			'U_ACTION'							=> $this->u_action,
+			'DISABLEEMOJIS_SAVE_EMOJI_TOKEN'				=> $this->config['disableemojis_save_emoji_token'],
+			'DISABLEEMOJIS_REPLACE_TOKEN_MODE'				=> $this->config['disableemojis_replace_token_mode'],
+			'DISABLEEMOJIS_REPLACE_TOKEN_MODE_OPTIONS' => [
+				'DISABLEEMOJIS_REPLACE_TOKEN_DO_NOTHING' 	=> '0',
+				'DISABLEEMOJIS_REPLACE_TOKEN_KEEP_CODE' 	=> '1',
+				'DISABLEEMOJIS_REPLACE_TOKEN_SHOW_HINT' 	=> '2',
+			],
+			'U_ACTION'										=> $this->u_action,
 		]);
+
+		add_form_key('disableemojis');
 	}
 
 	public function set_page_url($u_action): void
 	{
 		$this->u_action = $u_action;
+	}
+
+	private function set_meta_template_vars(string $tpl_prefix): void
+	{
+		$this->template->assign_vars([
+			$tpl_prefix . '_METADATA'	=> [
+				'EXT_NAME'		=> $this->metadata['extra']['display-name'],
+				'EXT_VER'		=> $this->language->lang($tpl_prefix . '_VERSION_STRING', $this->metadata['version']),
+			] + ($this->language->is_set($tpl_prefix . '_LANG_DESC') ? [
+				'LANG_DESC'		=> $this->language->lang($tpl_prefix . '_LANG_DESC'),
+				'LANG_VER'		=> $this->language->lang($tpl_prefix . '_VERSION_STRING', $this->language->lang($tpl_prefix . '_LANG_VER')),
+				'LANG_AUTHOR'	=> $this->language->lang($tpl_prefix . '_LANG_AUTHOR'),
+			] : []) + [
+				'CLASS'			=> strtolower($tpl_prefix) . '_footer',
+			],
+		]);
 	}
 }

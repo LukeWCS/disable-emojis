@@ -1,3 +1,11 @@
+### 1.1.1
+(2024-12-11)
+
+* Die Voraussetzungen haben sich geändert:
+  * phpBB: 3.3.0 - 3.3.x (Bisher: 3.2.11 - 3.3.x)
+  * PHP: 7.4.0 - 8.4.x (Bisher: 7.1.0 - 8.3.x)
+* Technik auf den Stand von EMP 3.0 gebracht, Details im Build Changelog.
+
 ### 1.1.0
 (2023-12-09)
 

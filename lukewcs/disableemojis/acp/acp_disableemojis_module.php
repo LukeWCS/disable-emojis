@@ -16,7 +16,7 @@ class acp_disableemojis_module
 	public $tpl_name;
 	public $u_action;
 
-	public function main($id, $mode)
+	public function main()
 	{
 		global $phpbb_container;
 

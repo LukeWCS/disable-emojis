@@ -14,8 +14,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	protected $config;
-	protected $language;
+	protected object $config;
+	protected object $language;
 
 	public function __construct(
 		\phpbb\config\config $config,
@@ -33,7 +33,7 @@ class listener implements EventSubscriberInterface
 		];
 	}
 
-	public static function getSubscribedEvents()
+	public static function getSubscribedEvents(): array
 	{
 		return [
 			'core.text_formatter_s9e_configure_after'	=> 'text_formatter_s9e_configure_after',
@@ -41,7 +41,7 @@ class listener implements EventSubscriberInterface
 		];
 	}
 
-	public function text_formatter_s9e_configure_after($event)
+	public function text_formatter_s9e_configure_after($event): void
 	{
 		if (!$this->config['disableemojis_save_emoji_token'])
 		{
@@ -50,7 +50,7 @@ class listener implements EventSubscriberInterface
 		}
 	}
 
-	public function text_formatter_s9e_render_before($event)
+	public function text_formatter_s9e_render_before($event): void
 	{
 		if ($this->config['disableemojis_replace_token_mode'] == 0)
 		{

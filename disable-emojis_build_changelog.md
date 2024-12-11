@@ -1,3 +1,16 @@
+### 1.1.1
+* Release (2024-12-11)
+* `ext.php` und `composer.json` max PHP 8.4 gesetzt.
+* PHP:
+  * Code verwendet jetzt 7.4 Features.
+  * Code strikter gestaltet.
+* ACP-Template:
+  * Aktuelles Makro `select()` von EMP 3.0 übernommen.
+  * Aktuelles Makro `footer()` von EMP 3.0 übernommen.
+* ACP-Controller:
+  * Aktuelle Funktion `select_struct()` von EMP 3.0 übernommen.
+  * Aktuelle Funktion `set_meta_template_vars()` von EMP 3.0 übernommen.
+
 ### 1.1.0
 * Release (2023-12-09)
 * Freigegeben für PHP 8.3.

@@ -1,3 +1,15 @@
+### 1.1.2
+* Release (2026-04-10)
+* PHP:
+  * Code verwendet jetzt 8.0 Features.
+* `ext.php`/`composer.json` angepasst:
+  * PHP: 7.4.0-8.4.x -> 8.0.0-8.5.x
+* ACP-Template:
+  * Aktuelle Makros `switch()` von Toggle Control 1.3.1 übernommen.
+* CSS:
+  * Auf Nested CSS umgestellt.
+  * Auf Kirk-Toggles 2.0 aktualisiert.
+
 ### 1.1.1
 * Release (2024-12-11)
 * `ext.php` und `composer.json` max PHP 8.4 gesetzt.

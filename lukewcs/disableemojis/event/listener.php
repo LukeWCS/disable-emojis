@@ -14,17 +14,11 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	protected object $config;
-	protected object $language;
-
 	public function __construct(
-		\phpbb\config\config $config,
-		\phpbb\language\language $language
+		protected \phpbb\config\config $config,
+		protected \phpbb\language\language $language,
 	)
 	{
-		$this->config	= $config;
-		$this->language	= $language;
-
 		$language->add_lang('s9e_disableemojis', 'lukewcs/disableemojis');
 		$this->replace_token = [
 			'',

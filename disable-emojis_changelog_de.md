@@ -1,3 +1,12 @@
+### 1.1.2
+(2026-04-10)
+
+* Fix: Im ACP Modul sollte unterhalb des Titels in der Beschreibung der tatsächliche Erweiterung-Name angezeigt werden, aber durch eine Änderung in 1.1.1 war das nicht mehr gegeben.
+* Technik auf den Stand von EMP 3.1 gebracht, Details im Build Changelog.
+* Anpassung für Toggle Control 1.3.
+* Die Voraussetzungen haben sich geändert:
+  * PHP: 8.0.0 - 8.5.x (Bisher: 7.4.0 - 8.4.x)
+
 ### 1.1.1
 (2024-12-11)
 
